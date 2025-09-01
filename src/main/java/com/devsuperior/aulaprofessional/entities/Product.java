@@ -97,7 +97,7 @@ public class Product {
         return items;
     }
 
-     public List<Order> geOrder(){
+     public List<Order> geOrders(){
         return items.stream().map(x -> x.getOrder()).toList();
     }
 }
