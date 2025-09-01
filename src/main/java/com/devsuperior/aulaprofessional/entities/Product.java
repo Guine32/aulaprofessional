@@ -1,6 +1,7 @@
 package com.devsuperior.aulaprofessional.entities;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import jakarta.persistence.Column;
@@ -92,4 +93,11 @@ public class Product {
         return categories;
     }
 
+    public Set<OrderItem> getItems() {
+        return items;
+    }
+
+     public List<Order> geOrder(){
+        return items.stream().map(x -> x.getOrder()).toList();
+    }
 }
